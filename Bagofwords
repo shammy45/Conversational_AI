@@ -1,0 +1,5 @@
+hello_doc = nlp("hello")
+hi_doc = nlp("Hi")
+holla_doc = nlp("holla")
+print(hello_doc.similarity(hi_doc))
+print(hello_doc.similarity(holla_doc))
