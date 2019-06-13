@@ -1,0 +1,16 @@
+Terminal -1
+Action server
+python -m rasa_core_sdk.endpoint --actions actions
+
+Terminal- 2
+Training Server
+python3 -m rasa_core.train interactive -o models/dialogue -d models/dialogue/domain.yml -s data/stories.md --nlumodels/nlu/default/weatherbot --endpoints endpoints.yml
+
+
+
+For ipynb conversion 
+jupyter nbconvert actions.ipynb --to python
+
+python3 -m rasa_core.train interactive -o models/dialogue -d models/dialogue/domain.yml -s data/stories.md --nlumodels/nlu/default/weatherbot --endpoints endpoints.yml
+
+
